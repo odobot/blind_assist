@@ -24,6 +24,9 @@ def resize_image(image, target_size=(224, 224)):
 def preprocess_image(image):
     return image.astype('float32') / 255.0  # Normalize pixel values to [0, 1]
 
+@app.route("/", methods=["GET"])
+def hello():
+    return "blind assist"
 
 @app.route("/process_image", methods=["POST"])
 def process_image():
@@ -57,4 +60,4 @@ def process_image():
         return jsonify({"error": "Failed to process image: " + str(e)}), 400
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
