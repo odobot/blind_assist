@@ -13,6 +13,9 @@ list = ['tench', 'goldfish', 'great white shark', 'tiger shark', 'hammerhead', '
 pretrained_model_url = "https://tfhub.dev/google/imagenet/mobilenet_v2_100_224/classification/4"
 model = hub.load(pretrained_model_url)
 
+
+# py -m pip install <package-name>
+# py -m pip install <package-name>
 # Function to resize an image
 def resize_image(image, target_size=(224, 224)):
     return cv2.resize(image, target_size)
