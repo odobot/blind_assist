@@ -14,6 +14,7 @@ pretrained_model_url = "https://tfhub.dev/google/imagenet/mobilenet_v2_100_224/c
 model = hub.load(pretrained_model_url)
 
 # Function to resize an image
+# Function to resize an image
 def resize_image(image, target_size=(224, 224)):
     return cv2.resize(image, target_size)
 
